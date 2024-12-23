@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@fecharModal",
+        tags = "@dadosEmBranco",
 //      glue = "src/test/java/br/com/chronosacademy/steps",
         glue = "br.com.chronosacademy.steps",
 

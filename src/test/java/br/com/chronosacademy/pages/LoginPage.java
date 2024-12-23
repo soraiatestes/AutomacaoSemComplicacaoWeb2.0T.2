@@ -16,6 +16,7 @@ public class LoginPage {
         loginMap.btnLogin.click();
     }
 
+
     public void clickBtnFechar(){
         loginMap.btnFechar.click();
     }
@@ -25,11 +26,17 @@ public class LoginPage {
     }
 
     public void setInpUserName(String username){
-        loginMap.inpUserName.sendKeys(username);
+        if (username != null){
+            loginMap.inpUserName.sendKeys(username);
+        }
+
     }
 
     public void setInPassword(String password){
-        loginMap.inpPassword.sendKeys(password);
+        if (password != null){
+            loginMap.inpPassword.sendKeys(password);
+        }
+
     }
 
     public void clickInpRemember(){
@@ -54,5 +61,13 @@ public class LoginPage {
 
     public void invisibilityOfBtnFechar(){
         Driver.invisibilityOf(loginMap.btnFechar);
+    }
+
+    public void aguardaLoader(){
+        Driver.attributChange(loginMap.divLoader,"display", "none");
+    }
+
+    public void visibilityOflinkCreateAccount() {
+        Driver.visibilityOf(loginMap.linkCreateAccount);
     }
 }
