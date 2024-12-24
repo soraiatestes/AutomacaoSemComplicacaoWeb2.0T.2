@@ -70,4 +70,14 @@ public class LoginPage {
     public void visibilityOflinkCreateAccount() {
         Driver.visibilityOf(loginMap.linkCreateAccount);
     }
+
+    public String getUsuarioLogado(){
+        Driver.visibilityOf(loginMap.textLogado);
+        return loginMap.textLogado.getText();
+    }
+
+    public String getErroLogin(){
+        Driver.visibilityOf(loginMap.txtErroLogin);
+        return loginMap.txtErroLogin.getText();
+    }
 }
